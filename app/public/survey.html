@@ -211,6 +211,7 @@
     	function validateForm() {
 			  var isValid = true;
 			  $('.form-control').each(function() {
+			  	// if something is blank, don't proceed
 			    if ($(this).val() === '')
 			        isValid = false;
 			  });
@@ -228,7 +229,7 @@
 	    	var userData = {
 	    		name: $("#name").val(),
 	    		photo: $("#photo").val(),
-	    		scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
+	    		scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
 	    	}
 
 	    	// Grab the URL of the website
