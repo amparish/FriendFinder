@@ -24,14 +24,14 @@ module.exports = function(app){
 				totalDifference += Math.abs(parseInt(userScores[s]) - parseInt(friends[i].scores[s]));
 
 				if (totalDifference <= bestMatch.friendDiff){
-					bestMatch.name = friends[i].name;
-					bestMatch.photo = friends[i].photo;
-					bestMatch.friendDiff = totalDifference;
+					friendMatch.name = friends[i].name;
+					friendMatch.photo = friends[i].photo;
+					friendMatch.friendDiff = totalDifference;
 				}
 			}
 		}
 
 		friends.push(userData);
-		res.json(bestMatch);
+		res.json(friendMatch);
 	});
 };
