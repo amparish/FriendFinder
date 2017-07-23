@@ -23,7 +23,7 @@ module.exports = function(app){
 			for (var s=0; s<friends[i].scores[s]; s++){
 				totalDifference += Math.abs(parseInt(userScores[s]) - parseInt(friends[i].scores[s]));
 
-				if (totalDifference <= bestMatch.friendDiff){
+				if (totalDifference <= friendMatch.friendDiff){
 					friendMatch.name = friends[i].name;
 					friendMatch.photo = friends[i].photo;
 					friendMatch.friendDiff = totalDifference;
